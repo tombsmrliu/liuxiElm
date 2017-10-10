@@ -420,8 +420,12 @@
 
                 </div>
 
-                <a href="javascript:;" class="submitbtn">
+                <a @click.prevent="toSettlement" class="submitbtn" v-if="foodTotalPrice>=20">
                     <span>去结算</span>
+                </a>
+
+                <a href="javascript:" v-if="foodTotalPrice<20">
+                    <span>￥20起送</span>
                 </a>
 
             </div>
@@ -993,6 +997,14 @@
             },
 
 
+            toSettlement(){
+                console.log('toSettlement');
+
+                this.$router.push({path:'/settlement',query:{rest_id:this.rest_id}});
+
+            }
+
+
 
 
         },
@@ -1002,6 +1014,8 @@
 
 
         },
+
+
 
 
         //TODO mounted

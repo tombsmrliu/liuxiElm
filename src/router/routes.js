@@ -13,6 +13,9 @@ const Profile = () => import('pages/profile/profile');
 
 const Shop = () => import('pages/shop/shop');
 
+const Login =() => import('@/components/login');
+const Settlement =() => import('@/components/settlement');
+
 
 export default [
     {
@@ -39,6 +42,14 @@ export default [
             {
                 path:'/shop',
                 component:Shop
+            },
+            {
+                path:'/login',
+                component:Login
+            },
+            {
+                path:'/settlement',
+                component:Settlement
             }
         ]
     }

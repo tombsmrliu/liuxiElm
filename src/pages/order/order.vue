@@ -1,7 +1,7 @@
 <template>
 
     <div id="order">
-        <h3>我是订单页面</h3>
+        <h3>订单完成</h3>
 
 
 
